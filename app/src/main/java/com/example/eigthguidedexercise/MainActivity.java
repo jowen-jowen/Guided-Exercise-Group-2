@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         listOfNames = new ArrayList<>(Arrays.asList("Name Here", "Papsi", "Pol", "Noy", "Che", "Kris", "Tin", "Renz", "Chan", "Ven", "Jher"));
-        adpt = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listOfNames);
+        adpt = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listOfNames);
+        adpt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         names = findViewById(R.id.spnrNamesGE8);
         res = findViewById(R.id.tvResultsGE8);
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddName = findViewById(R.id.btnAddNameGE8);
         btnDeleteName = findViewById(R.id.btnDeleteNameGE8);
 
-
+        names.setAdapter(adpt);
         showSelectedName();
         addNameToSpinner();
         deleteNameToSpinner();
@@ -74,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
     public void addNameToSpinner(){
         names.setAdapter(adpt);
         btnAddName.setOnClickListener(v->{
+            String addedName = etAddName.getText().toString().trim();
             if (!etAddName.getText().toString().isEmpty()) {
+                Toast.makeText(this, "Added Name: " + addedName, Toast.LENGTH_SHORT).show();
                 listOfNames.add(etAddName.getText().toString());
                 adpt.notifyDataSetChanged();
                 etAddName.setText("");
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!removedName.equals("Name Here")){
                     listOfNames.remove(selectedPos);
                     adpt.notifyDataSetChanged();
-                    Toast.makeText(this, removedName + "has been removed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, removedName + " has been removed", Toast.LENGTH_SHORT).show();
 
                     int defaultIndex = listOfNames.indexOf("Name Here");
                     if (defaultIndex >= 0) {

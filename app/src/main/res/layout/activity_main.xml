@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/material_dynamic_neutral60">
+    >
 
     <TextView
         android:layout_width="204dp"
@@ -15,7 +15,6 @@
         android:fontFamily="monospace"
         android:gravity="center_horizontal"
         android:text="@string/spinner_guided_exercise"
-        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
