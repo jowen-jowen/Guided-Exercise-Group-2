@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TenthGuidedExercise</string>
+    <string name="webview_and_autocomplete_textview_nguided_exercise">WebView and Autocomplete TextView \nGuided Exercise</string>
+    <string name="url">URL</string>
+    <string name="go_to_url">GO TO URL</string>
+</resources>
