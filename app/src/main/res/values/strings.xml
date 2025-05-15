@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EigthGuidedExercise</string>
+    <string name="spinner_guided_exercise">Spinner Guided Exercise</string>
+    <string name="name">Name:</string>
+    <string name="add_name">ADD NAME</string>
+    <string name="add">ADD</string>
+    <string name="delete_name">DELETE NAME</string>
+    <string name="delete">DELETE</string>
+</resources>
