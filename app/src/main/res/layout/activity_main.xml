@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/chkTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TWO (2)"
+        android:background="#CCCCCC"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/chkOne"
+        app:layout_constraintTop_toBottomOf="@+id/chkOne" />
+
+    <CheckBox
+        android:id="@+id/chkFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="FOUR (4)"
+        android:background="#CCCCCC"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/chkThree"
+        app:layout_constraintTop_toBottomOf="@+id/chkThree" />
+
+    <CheckBox
+        android:id="@+id/chkThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="THREE (3)"
+        android:background="#CCCCCC"
+        android:padding="2dp"
+        app:layout_constraintStart_toStartOf="@+id/chkTwo"
+        app:layout_constraintTop_toBottomOf="@+id/chkTwo" />
+
+    <CheckBox
+        android:id="@+id/chkOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ONE (1)"
+        android:background="#CCCCCC"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:background="#CCCCCC"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:text="Checkbox and Text Color\nGuided Exercise"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnClickGE6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="CLICK"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkFour" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="CLEAR"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnClickGE6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClickGE6" />
+
+    <TextView
+        android:id="@+id/tvResultGE6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="10dp"
+        android:text="Result Here"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClickGE6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.39" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
